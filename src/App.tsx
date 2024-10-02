@@ -5,7 +5,6 @@ import Home from './views/Home';
 import Portfolio from './views/Portfolio';
 import About from './views/About';
 import Footer from './views/Footer';
-import 'react-notifications/lib/notifications.css';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('home');
