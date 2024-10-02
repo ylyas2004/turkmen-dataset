@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Aperture, Languages, RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 import { Language, NotificationProps, TranslationData } from '../models/interfaces';
 import {API_URLS} from '../config/config';
 
