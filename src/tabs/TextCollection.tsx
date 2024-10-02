@@ -36,12 +36,6 @@ const TextCollection: React.FC<NotificationProps> = ({ addNotification }) => {
     }
   };
 
-  useEffect(() => {
-    fetchCategories();
-    fetchLanguages();
-  }, [fetchCategories, fetchLanguages]);
-
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
