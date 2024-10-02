@@ -17,8 +17,7 @@ const App: React.FC = () => {
     <div className="container">
       <Navbar activeTab={activeTab} onTabChange={handleTabChange} />
       <main className="main">
-        {activeTab === 'home' && <Home />}
-        {activeTab === 'portfolio' && <Portfolio />}
+        {activeTab === 'home' && <Portfolio />}
         {activeTab === 'about' && <About />}
       </main>
       <Footer></Footer>
