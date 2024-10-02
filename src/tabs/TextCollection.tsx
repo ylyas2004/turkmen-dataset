@@ -14,11 +14,6 @@ const TextCollection: React.FC<NotificationProps> = ({ addNotification }) => {
   const [languages, setLanguages] = useState<Language[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    fetchCategories();
-    fetchLanguages();
-  }, []);
-
   const fetchCategories = async () => {
     try {
       const response = await fetch(`${API_URLS.getCategories}`);
@@ -40,6 +35,11 @@ const TextCollection: React.FC<NotificationProps> = ({ addNotification }) => {
       addNotification('Failed to fetch languages', 'error');
     }
   };
+
+  useEffect(() => {
+    fetchCategories();
+    fetchLanguages();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
