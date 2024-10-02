@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../models/interfaces';
 import { Category, Language, NotificationProps } from '../models/interfaces';
 import {API_URLS} from '../config/config';
@@ -69,6 +69,7 @@ const TextCollection: React.FC<NotificationProps> = ({ addNotification }) => {
         setCategory('');
         setCustomCategory('');
         fetchCategories();
+        fetchLanguages();
       } else {
         addNotification('Failed to save text entry', 'error');
         throw new Error('Failed to save text entry');
