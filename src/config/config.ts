@@ -1,7 +1,6 @@
 // src/config/config.ts
 
-const BASE_URL = 'http://localhost:3001/api';
-
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
 
 export const API_URLS = {
   getCategories: `${BASE_URL}/categories`,
